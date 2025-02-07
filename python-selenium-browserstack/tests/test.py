@@ -25,9 +25,10 @@ try:
 
     try:
         signin.click();
+        wait = WebDriverWait(driver, timeout=3)
     except:
         print("did not click signin")
-    WebDriverWait(driver, 10).until(EC.title_contains('StackDemo'))
+    #WebDriverWait(driver, 10).until(EC.title_contains('StackDemo'))
     get_url = driver.current_url
     print("The current url is:"+str(get_url))
 
