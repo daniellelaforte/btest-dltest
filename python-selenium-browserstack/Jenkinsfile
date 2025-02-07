@@ -8,7 +8,7 @@ pipeline {
           				pip install -r requirements.txt
           				"""
           			   sh """
-          			 	browserstack-sdk python3 ./tests/test.py
+          			 	browserstack-sdk python3 ./python-selenium-browserstack/tests/test.py
           			 	"""
             }
             browserStackReportPublisher 'automate'
