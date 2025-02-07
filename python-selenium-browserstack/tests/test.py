@@ -30,7 +30,7 @@ try:
         print("did not click signin")
     #WebDriverWait(driver, 10).until(EC.title_contains('StackDemo'))
     get_url = driver.current_url
-    print("The current url is:"+str(get_url))
+    print("Now the current url is:"+str(get_url))
 
     try:
         username = driver.find_element(By.ID, 'react-select-2-input')
