@@ -1,0 +1,18 @@
+pipeline {
+   agent any
+   stages {
+      stage('setup') {
+         steps {
+            browserstack(credentialsId: 'fa55b0f2-b6f2-43fb-b61d-381ca9bf0cc9') {
+                     sh """
+          				pip install -r requirements.txt
+          				"""
+          			   sh """
+          			 	browserstack-sdk python3 ./tests/test.py
+          			 	"""
+            }
+            browserStackReportPublisher 'automate'
+         }
+      }
+    }
+  }
