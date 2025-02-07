@@ -12,7 +12,7 @@ from selenium.webdriver.common.keys import Keys
 # so this will be overridden and tests will run browserstack -
 # without any changes to the test files!
 options = ChromeOptions()
-options.set_capability('sessionName', 'BStack Sample Test')
+#options.set_capability('sessionName', 'BStack Sample Test')
 driver = webdriver.Chrome(options=options)
 
 try:
