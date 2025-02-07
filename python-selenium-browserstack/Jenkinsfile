@@ -3,7 +3,7 @@ pipeline {
    stages {
       stage('setup') {
          steps {
-            browserstack(credentialsId: 'fa55b0f2-b6f2-43fb-b61d-381ca9bf0cc9') {
+            browserstack(credentialsId: 'b894af2b-2e70-4686-ae0e-1f927fd13928') {
                      sh """
           				pip install -r requirements.txt
           				"""
