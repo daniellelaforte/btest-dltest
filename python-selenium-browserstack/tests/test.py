@@ -28,8 +28,14 @@ try:
     get_url = driver.current_url
     print("The current url is:"+str(get_url))
 
-    username = driver.find_element(By.ID, 'react-select-2-input')
-    password = driver.find_element(By.ID, 'react-select-3-input')
+    try:
+        username = driver.find_element(By.ID, 'react-select-2-input')
+    except: 
+        username = driver.find_element(By.ID, 'react-select-4-input')
+    try:
+        password = driver.find_element(By.ID, 'react-select-3-input')
+    except:
+        password = driver.find_element(By.ID, 'react-select-5-input')
 
     username.clear()
     password.clear()
