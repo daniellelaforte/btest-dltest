@@ -4,6 +4,9 @@ pipeline {
       stage('version') {
          steps {
           	sh 'python3 --version'
+            sh 'virtualenv venv --distribute'
+            sh '. venv/bin/activate'
+            sh 'pip install -r requirements.txt'
          }
       }      
       stage('setup') {
