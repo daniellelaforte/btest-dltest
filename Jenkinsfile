@@ -2,8 +2,10 @@ pipeline {
    agent any
    stages {   
       stage('test PythonEnv') {
-         withPythonEnv('python3') {
+         steps {
+            withPythonEnv('python3') {
                sh 'pip install requirements.txt'
+            }
          }
       } 
       stage('setup') {
