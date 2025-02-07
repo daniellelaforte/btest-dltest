@@ -23,7 +23,10 @@ try:
 
     signin = driver.find_element(By.ID,'signin')
 
-    signin.click();
+    try:
+        signin.click();
+    except:
+        print("did not click signin")
     WebDriverWait(driver, 10).until(EC.title_contains('StackDemo'))
     get_url = driver.current_url
     print("The current url is:"+str(get_url))
