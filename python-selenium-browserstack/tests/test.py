@@ -25,7 +25,8 @@ try:
 
     try:
         signin.click();
-        wait = WebDriverWait(driver, timeout=3)
+        wait = WebDriverWait(driver, timeout=5)
+        print("is this reached")
     except:
         print("did not click signin")
     #WebDriverWait(driver, 10).until(EC.title_contains('StackDemo'))
